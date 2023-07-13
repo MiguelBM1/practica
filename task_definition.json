@@ -1,14 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:286486906395:task-definition/bm15056-repository:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:286486906395:task-definition/bm15056tarea:1",
     "containerDefinitions": [
         {
-            "name": "bm15056-repository",
-            "image": "286486906395.dkr.ecr.us-east-2.amazonaws.com/bm15056-repository",
-            "cpu": 1024,
-            "memory": 1024,
+            "name": "bm15056tarea",
+            "image": "286486906395.dkr.ecr.us-east-2.amazonaws.com/bm15056tarea",
+            "cpu": 0,
             "portMappings": [
                 {
-                    "name": "bm15056-repository-80-tcp",
+                    "name": "bm15056tarea-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -20,18 +19,13 @@
             "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
-            "resourceRequirements": [
-                {
-                    "value": "1",
-                    "type": "GPU"
-                }
-            ]
+            "ulimits": []
         }
     ],
-    "family": "bm15056-repository",
+    "family": "bm15056tarea",
+    "taskRoleArn": "arn:aws:iam::286486906395:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::286486906395:role/ecsTaskExecutionRole",
-    "networkMode": "bridge",
+    "networkMode": "awsvpc",
     "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
@@ -40,26 +34,33 @@
             "name": "com.amazonaws.ecs.capability.ecr-auth"
         },
         {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
             "name": "ecs.capability.execution-role-ecr-pull"
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
         }
     ],
     "placementConstraints": [],
     "compatibilities": [
-        "EC2"
+        "EC2",
+        "FARGATE"
     ],
     "requiresCompatibilities": [
-        "EC2"
+        "FARGATE"
     ],
-    "cpu": "1024",
+    "cpu": "512",
     "memory": "1024",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-12T02:06:12.696Z",
+    "registeredAt": "2023-07-13T00:30:19.044Z",
     "registeredBy": "arn:aws:iam::286486906395:root",
     "tags": []
 }

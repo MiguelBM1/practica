@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:286486906395:task-definition/bm15056tarea:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:286486906395:task-definition/bm15056tarea:5",
     "containerDefinitions": [
         {
             "name": "bm15056tarea",
@@ -26,7 +26,7 @@
     "taskRoleArn": "arn:aws:iam::286486906395:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::286486906395:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 5,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -60,7 +60,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-07-13T00:30:19.044Z",
+    "registeredAt": "2023-07-13T03:05:30.709Z",
     "registeredBy": "arn:aws:iam::286486906395:root",
     "tags": []
 }
